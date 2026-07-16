@@ -1,492 +1,307 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Barra Rocco | CTO & CISO Mindset</title>
 
     <meta
         name="description"
-        content="Barra Rocco - CTO & CISO Mindset. IT Strategy, Cybersecurity and Industrial Systems enabling production excellence and organizational growth."
+        content="Barra Rocco. CTO & CISO Mindset, IT Strategy and Industrial Systems enabling production excellence and organizational growth."
     >
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            background: #f4f6f8;
-            color: #1f2933;
-        }
-
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #0b1f33;
-            padding: 16px 24px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        nav .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 24px;
-        }
-
-        nav .logo {
-            color: #ffffff;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        nav .links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-        }
-
-        nav .links a {
-            color: #dbe7f3;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        nav .links a:hover {
-            color: #ffffff;
-        }
-
-        header {
-            background: linear-gradient(135deg, #0b1f33, #174a73);
-            color: #ffffff;
-            padding: 100px 24px;
-        }
-
-        .hero {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .hero-label {
-            margin: 0 0 18px;
-            font-size: 16px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #bcd7ed;
-        }
-
-        h1 {
-            margin: 0 0 18px;
-            font-size: 56px;
-            line-height: 1.1;
-        }
-
-        .headline {
-            max-width: 900px;
-            margin: 0 0 18px;
-            font-size: 27px;
-            line-height: 1.35;
-            font-weight: 600;
-        }
-
-        .hero-description {
-            max-width: 820px;
-            margin: 0;
-            font-size: 19px;
-            color: #e4eef7;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 32px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 13px 20px;
-            border-radius: 7px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .button-primary {
-            background: #ffffff;
-            color: #0b1f33;
-        }
-
-        .button-secondary {
-            border: 1px solid #ffffff;
-            color: #ffffff;
-        }
-
-        main {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 60px 24px;
-        }
-
-        section {
-            margin-bottom: 34px;
-            padding: 38px;
-            background: #ffffff;
-            border-radius: 14px;
-            box-shadow: 0 4px 18px rgba(15, 35, 55, 0.08);
-        }
-
-        h2 {
-            margin-top: 0;
-            margin-bottom: 18px;
-            font-size: 32px;
-            color: #123e63;
-        }
-
-        h3 {
-            margin-bottom: 8px;
-            color: #174a73;
-        }
-
-        p {
-            margin-top: 0;
-        }
-
-        .intro {
-            font-size: 18px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            padding: 24px;
-            background: #f7f9fb;
-            border-left: 4px solid #174a73;
-            border-radius: 8px;
-        }
-
-        .card p {
-            margin-bottom: 0;
-        }
-
-        .content-list {
-            margin: 0;
-            padding-left: 22px;
-        }
-
-        .content-list li {
-            margin-bottom: 10px;
-        }
-
-        .publication-item {
-            padding: 18px 0;
-            border-bottom: 1px solid #dfe6ec;
-        }
-
-        .publication-item:last-child {
-            border-bottom: none;
-        }
-
-        .publication-item p {
-            margin-bottom: 0;
-            color: #52616f;
-        }
-
-        .contact-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-top: 22px;
-        }
-
-        .contact-links a {
-            display: inline-block;
-            padding: 12px 18px;
-            background: #174a73;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 7px;
-            font-weight: bold;
-        }
-
-        footer {
-            padding: 30px 24px;
-            text-align: center;
-            background: #0b1f33;
-            color: #dbe7f3;
-        }
-
-        @media (max-width: 760px) {
-            nav .nav-container {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-
-            nav .links {
-                gap: 12px;
-            }
-
-            header {
-                padding: 70px 22px;
-            }
-
-            h1 {
-                font-size: 42px;
-            }
-
-            .headline {
-                font-size: 23px;
-            }
-
-            main {
-                padding: 40px 18px;
-            }
-
-            section {
-                padding: 28px 22px;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <nav>
-        <div class="nav-container">
-            <a class="logo" href="#home">Barra Rocco</a>
+    <header class="site-header">
+        <nav class="navigation">
 
-            <div class="links">
-                <a href="#profilo">Profilo</a>
-                <a href="#visione">Visione CTO</a>
-                <a href="#competenze">Aree di intervento</a>
-                <a href="#pubblicazioni">Pubblicazioni</a>
-                <a href="#interviste">Interviste</a>
-                <a href="#contatti">Contatti</a>
+            <a class="brand" href="index.html">
+                Barra Rocco
+            </a>
+
+            <div class="nav-links">
+                <a class="active" href="index.html">Home</a>
+                <a href="profilo.html">Profilo</a>
+                <a href="visione.html">Visione CTO</a>
+                <a href="competenze.html">Competenze</a>
+                <a href="pubblicazioni.html">Pubblicazioni</a>
+                <a href="contatti.html">Contatti</a>
             </div>
-        </div>
-    </nav>
 
-    <header id="home">
-        <div class="hero">
-            <p class="hero-label">Technology leadership for industrial organizations</p>
+        </nav>
+    </header>
 
-            <h1>Barra Rocco</h1>
+    <section class="hero">
 
-            <p class="headline">
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                Technology leadership for industrial organizations
+            </p>
+
+            <h1>
+                Barra Rocco
+            </h1>
+
+            <p class="hero-title">
                 CTO &amp; CISO Mindset | IT Strategy and Industrial Systems
                 enabling Production Excellence and Organizational Growth
             </p>
 
             <p class="hero-description">
-                Integro strategia IT, cybersecurity, sistemi industriali e
-                trasformazione organizzativa per costruire ecosistemi
-                tecnologici resilienti, sicuri e orientati ai risultati.
+                Connetto strategia IT, cybersecurity, sistemi industriali
+                e sviluppo organizzativo per costruire ecosistemi tecnologici
+                resilienti, sicuri e orientati ai risultati.
             </p>
 
-            <div class="hero-buttons">
-                <a class="button button-primary" href="#profilo">
+            <div class="buttons">
+
+                <a
+                    class="button button-primary"
+                    href="profilo.html"
+                >
                     Scopri il mio profilo
                 </a>
 
-                <a class="button button-secondary" href="#contatti">
-                    Contatti
+                <a
+                    class="button button-outline"
+                    href="pubblicazioni.html"
+                >
+                    Pubblicazioni e interviste
                 </a>
+
             </div>
+
         </div>
-    </header>
+
+    </section>
 
     <main>
 
-        <section id="profilo">
-            <h2>Profilo</h2>
+        <section>
 
-            <p class="intro">
-                Opero con una visione da CTO e CISO, collegando tecnologia,
-                sicurezza, produzione e organizzazione.
+            <h2>
+                Tecnologia come leva strategica
+            </h2>
+
+            <p class="lead">
+                Una moderna leadership tecnologica deve collegare obiettivi
+                aziendali, produzione, sicurezza e trasformazione organizzativa.
             </p>
 
             <p>
-                Il mio obiettivo è progettare e governare sistemi, processi e
-                infrastrutture capaci di supportare l'eccellenza produttiva,
-                la continuità operativa, la protezione degli asset e la crescita
-                sostenibile dell'organizzazione.
-            </p>
-
-            <p>
-                Considero l'IT non soltanto come una funzione tecnica, ma come
-                una leva strategica per migliorare performance, capacità
-                decisionale, collaborazione, resilienza e competitività.
-            </p>
-        </section>
-
-        <section id="visione">
-            <h2>Visione CTO</h2>
-
-            <p>
-                Una moderna leadership tecnologica deve tradurre gli obiettivi
-                aziendali in scelte architetturali, operative e organizzative
+                Il mio approccio integra visione strategica e capacità
+                realizzativa, traducendo le esigenze dell'organizzazione
+                in architetture, processi, servizi e priorità tecnologiche
                 concrete.
             </p>
 
-            <div class="grid">
-                <div class="card">
-                    <h3>Business alignment</h3>
-                    <p>
-                        Allineare investimenti, roadmap e priorità tecnologiche
-                        alla strategia e ai risultati dell'impresa.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Operational resilience</h3>
-                    <p>
-                        Rafforzare continuità operativa, affidabilità dei servizi
-                        e capacità di risposta agli eventi critici.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Cybersecurity by design</h3>
-                    <p>
-                        Integrare sicurezza, governance del rischio e protezione
-                        dei dati fin dalle prime fasi delle iniziative.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Organizational growth</h3>
-                    <p>
-                        Sviluppare competenze, responsabilità, collaborazione e
-                        cultura digitale all'interno dell'organizzazione.
-                    </p>
-                </div>
-            </div>
         </section>
 
-        <section id="competenze">
-            <h2>Aree di intervento</h2>
+        <section>
+
+            <h2>
+                Aree di focalizzazione
+            </h2>
+
+            <div class="grid">
+
+                <article class="card">
+
+                    <h3>
+                        IT Strategy
+                    </h3>
+
+                    <p>
+                        Roadmap tecnologiche, governance, investimenti,
+                        architetture e allineamento tra IT e strategia aziendale.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>
+                        CTO Mindset
+                    </h3>
+
+                    <p>
+                        Leadership tecnologica orientata all'innovazione,
+                        alla scalabilità e alla crescita dell'organizzazione.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>
+                        CISO Mindset
+                    </h3>
+
+                    <p>
+                        Cybersecurity, gestione del rischio, resilienza,
+                        continuità operativa e protezione degli asset.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>
+                        Industrial Systems
+                    </h3>
+
+                    <p>
+                        Integrazione IT/OT, sistemi di produzione,
+                        digitalizzazione industriale e affidabilità operativa.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2>
+                Production Excellence
+            </h2>
+
+            <p class="lead">
+                I sistemi tecnologici devono contribuire direttamente
+                alla qualità, alla produttività e alla continuità dei processi.
+            </p>
+
+            <div class="grid grid-three">
+
+                <article class="card">
+
+                    <h3>
+                        Affidabilità
+                    </h3>
+
+                    <p>
+                        Infrastrutture e servizi progettati per sostenere
+                        operazioni critiche e ridurre le interruzioni.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>
+                        Integrazione
+                    </h3>
+
+                    <p>
+                        Connessione coerente tra persone, dati,
+                        processi aziendali e sistemi industriali.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>
+                        Miglioramento continuo
+                    </h3>
+
+                    <p>
+                        Tecnologia, misurazione e governance al servizio
+                        dell'evoluzione costante dell'organizzazione.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2>
+                Organizational Growth
+            </h2>
+
+            <p>
+                La trasformazione tecnologica genera valore quando sviluppa
+                competenze, responsabilità, collaborazione e capacità
+                decisionale.
+            </p>
 
             <ul class="content-list">
                 <li>
-                    Definizione della strategia IT e delle roadmap tecnologiche.
+                    Costruzione di team IT orientati al servizio e ai risultati.
                 </li>
 
                 <li>
-                    Governance IT, portafoglio progetti e gestione delle priorità.
+                    Definizione di ruoli, responsabilità e modelli di governance.
                 </li>
 
                 <li>
-                    Cybersecurity, gestione del rischio e continuità operativa.
+                    Sviluppo della cultura della sicurezza e del rischio.
                 </li>
 
                 <li>
-                    Architetture infrastrutturali, cloud e servizi digitali.
+                    Collaborazione tra IT, produzione e funzioni aziendali.
                 </li>
 
                 <li>
-                    Sistemi industriali, ambienti OT e integrazione IT/OT.
-                </li>
-
-                <li>
-                    Digitalizzazione dei processi produttivi e organizzativi.
-                </li>
-
-                <li>
-                    Data governance, reporting e supporto alle decisioni.
-                </li>
-
-                <li>
-                    Sviluppo delle competenze e dei modelli operativi dei team.
+                    Gestione del cambiamento e adozione delle nuove tecnologie.
                 </li>
             </ul>
+
         </section>
 
-        <section id="pubblicazioni">
-            <h2>Pubblicazioni</h2>
+        <section>
 
-            <div class="publication-item">
-                <h3>Titolo della pubblicazione</h3>
-                <p>
-                    Inserire qui una breve descrizione, la testata o il portale,
-                    la data e il collegamento al contenuto.
-                </p>
-            </div>
-
-            <div class="publication-item">
-                <h3>Titolo dell'articolo o del contributo</h3>
-                <p>
-                    Questa sezione raccoglierà articoli, approfondimenti,
-                    contributi tecnici e contenuti professionali.
-                </p>
-            </div>
-        </section>
-
-        <section id="interviste">
-            <h2>Interviste e media</h2>
-
-            <div class="publication-item">
-                <h3>Titolo dell'intervista</h3>
-                <p>
-                    Inserire qui il nome della testata, del podcast o
-                    dell'evento, con data e link.
-                </p>
-            </div>
-
-            <div class="publication-item">
-                <h3>Webinar, conferenza o intervento pubblico</h3>
-                <p>
-                    Qui potrai raccogliere video, podcast, webinar e
-                    partecipazioni a eventi.
-                </p>
-            </div>
-        </section>
-
-        <section id="contatti">
-            <h2>Contatti</h2>
+            <h2>
+                Pubblicazioni e interviste
+            </h2>
 
             <p>
-                Per collaborazioni professionali, interviste, conferenze e
-                opportunità di confronto sui temi della strategia IT,
-                cybersecurity e trasformazione industriale.
+                Raccolgo contributi, articoli, interviste e interventi dedicati
+                a strategia IT, cybersecurity, sistemi industriali,
+                leadership tecnologica e trasformazione organizzativa.
             </p>
 
-            <div class="contact-links">
-                <a href="www.linkedin.com/in/rocco-barra-31b68641" target="_blank" rel="noopener">
-                    LinkedIn
+            <div class="buttons">
+
+                <a
+                    class="button button-primary"
+                    href="pubblicazioni.html"
+                >
+                    Consulta i contenuti
                 </a>
 
-                <a href="mailto:barra_rocco@hotmail.com">
-                    Email
-                </a>
             </div>
+
         </section>
 
     </main>
 
-    <footer>
-        © 2026 Barra Rocco · CTO &amp; CISO Mindset
+    <footer class="site-footer">
+
+        <p>
+            © 2026 Barra Rocco
+        </p>
+
+        <p>
+            CTO &amp; CISO Mindset · IT Strategy · Industrial Systems
+        </p>
+
     </footer>
 
 </body>
+
 </html>
